@@ -5,12 +5,15 @@
 - 핵심기능: 버튼이 마우스를 피해 이동, 이동했을 때와 클릭됐을 때 소리, 점수 기능, 게임 오버, 다시 시작 기능 구현
 - 화면구성: 폼 화면과 이동하는 버튼, 다시 시작 버튼과 폼 화면 제목의 점수와 버튼의 위치
 ## 실행 화면
-1단계 기능 구현: gif, 기본 도망 기능, 링크를 눌러야 확인 가능합니다ㅠ
+1단계 기능 구현: gif, 기본 도망 기능
 ![1단계](https://github.com/user-attachments/assets/ee0ec5d0-4018-41ee-8bb7-b14e398e7c3b)
+
 2단계 기능 구현: 스크린샷, 소리와 메시지 박스 추가
 <img width="944" height="648" alt="스크린샷 2026-03-12 110355" src="https://github.com/user-attachments/assets/643cc4ab-f3b4-4e3f-94e2-f8a1243b6a5f" />
-3단계 기능 구현: gif, 점수 표시와 점수별 난이도 조정,링크를 눌러야 확인이 가능합니다ㅠ
+
+3단계 기능 구현: gif, 점수 표시와 점수별 난이도 조정
 ![3단계 기능 구현](https://github.com/user-attachments/assets/f58ba491-6c05-4333-a0d2-9ebdac57173b)
+
 4단계 기능 구현: 스크린샷, 게임 오버 및 리셋
 <img width="943" height="646" alt="스크린샷 2026-03-12 114100" src="https://github.com/user-attachments/assets/3b4a79aa-660e-4863-af36-21384000f5db" />
 
