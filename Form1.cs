@@ -8,6 +8,7 @@ namespace CatchButton
     public partial class Form1 : Form
     {
         Random rand = new Random();
+        int score = 0;
         public Form1()
         {
             InitializeComponent();
@@ -24,13 +25,21 @@ namespace CatchButton
 
             button.Location = new Point(x, y);
 
-            this.Text = $"버튼 좌표 : X={x}, Y={y}"; // 폼의 제목에 버튼의 버튼의 현재 좌표를 표시
+            this.Text = $"점수 : {score} |버튼 좌표 : X={x}, Y={y}"; // 폼의 제목에 점수와 버튼의 현재 좌표를 표시
         }
 
         private void button_MouseClick(object sender, MouseEventArgs e)     //마우스 잡았을 때 이벤트 핸들러
         {
             SystemSounds.Exclamation.Play();   // 잡기 성공 소리
+
+            score += 10;   // 잡기 성공시 점수 10점 추가
+                           
+            button.Width = (int)(button.Width * 0.9);        // 버튼 크기 10% 감소
+            button.Height = (int)(button.Height * 0.9);
+
             MessageBox.Show("축하합니다~!");
+
+            this.Text = $"점수 : {score}"; //점수 표시
         }
     }
 }
