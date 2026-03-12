@@ -12,8 +12,10 @@
 3단계 기능 구현: gif, 점수 표시와 점수별 난이도 조정,링크를 눌러야 확인이 가능합니다ㅠ
 ![3단계 기능 구현](https://github.com/user-attachments/assets/f58ba491-6c05-4333-a0d2-9ebdac57173b)
 4단계 기능 구현: 스크린샷, 게임 오버 및 리셋
+<img width="943" height="646" alt="스크린샷 2026-03-12 114100" src="https://github.com/user-attachments/assets/3b4a79aa-660e-4863-af36-21384000f5db" />
+게임 오버 기능
 <img width="946" height="652" alt="스크린샷 2026-03-12 114113" src="https://github.com/user-attachments/assets/ad1d71de-4a81-4408-9031-38317f965553" />
-
+다시 시작 기능
 ## 구현 시 어려웠던 점
 - C# 기반의 Winform앱 프로그램이 익숙치 않아 프로젝트 파일들을 파악하기 어려웠지만 검색해서 해결했습니다.
 - 소리 기능 구현시 처음 구현해보는 기능이라 시스템 소리 기능을 사용하는 코드를 쓰는 것이 까다로웠습니다.
