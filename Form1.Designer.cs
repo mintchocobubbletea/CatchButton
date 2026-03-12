@@ -37,10 +37,11 @@
             button.Font = new Font("맑은 고딕", 15F);
             button.Location = new Point(330, 217);
             button.Name = "button";
-            button.Size = new Size(169, 71);
+            button.Size = new Size(283, 165);
             button.TabIndex = 0;
             button.Text = "나를 잡아봐";
             button.UseVisualStyleBackColor = false;
+            button.MouseClick += button_MouseClick;
             button.MouseEnter += button_MouseEnter;
             // 
             // Form1
