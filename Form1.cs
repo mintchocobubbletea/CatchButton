@@ -17,9 +17,7 @@ namespace CatchButton
         //버튼 위에 마우스가 올라갔을 때 버튼이 랜덤한 위치로 이동하도록 하는 이벤트 핸들러
         private void button_MouseEnter(object sender, EventArgs e)
         {
-            // 새로운 위치 값 세팅. 새로운 X,Y 좌표값
-            int x_position = 100;
-            int y_position = 150;
+
             // 1. 난수 생성기 준비
             Random rd = new Random();
             // 2. 가용 영역 계산 (버튼이 폼 테두리에 걸리지 않게 보호)
@@ -33,7 +31,7 @@ namespace CatchButton
             button.Location = new Point(nextX, nextY);
             // 5. 시각적 피드백 (폼 제목 표시줄에 좌표 출력)
             this.Text = $"버튼 위치: ({nextX}, {nextY})";
-            
+
             /*
             button.Location = new Point(x_position, y_position);  // 버튼을 새로운 위치로 옮김 (새로운 Point 객체 생성)
 
@@ -66,6 +64,8 @@ namespace CatchButton
             float newFontSize = button.Font.Size * 0.9f;                       //버튼 크기에 맞춰 글씨 크기 감소
             button.Font = new Font(button.Font.FontFamily, newFontSize);
 
+            missCount = 0; //버튼 클릭 성공시 놏친 횟수 초기화
+
             MessageBox.Show("축하합니다~!");
 
             this.Text = $"점수 : {score}"; //점수 표시
@@ -94,6 +94,20 @@ namespace CatchButton
             button.Location = new Point(100, 150);
 
             this.Text = "숨바꼭질 버튼 게임";
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+            "종료하시겠습니까?",
+            "게임 종료",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question);
+
+            if (result == DialogResult.No)
+            {
+                e.Cancel = true;   // 창 닫기 취소
+            }
         }
     }
 }

@@ -36,7 +36,7 @@
             // 
             button.BackColor = SystemColors.GradientActiveCaption;
             button.Font = new Font("맑은 고딕", 30F);
-            button.Location = new Point(330, 217);
+            button.Location = new Point(100, 150);
             button.Name = "button";
             button.Size = new Size(300, 200);
             button.TabIndex = 0;
@@ -67,6 +67,7 @@
             Controls.Add(button);
             Name = "Form1";
             Text = "Form1";
+            FormClosing += Form1_FormClosing;
             ResumeLayout(false);
         }
 
