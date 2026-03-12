@@ -8,7 +8,7 @@ namespace CatchButton
     public partial class Form1 : Form
     {
         Random rand = new Random();
-        int score = 0;
+        int score = 1000;   // 초기 점수 1000점 설정
         int missCount = 0;   // 버튼 놓친 횟수
         public Form1()
         {
@@ -46,10 +46,11 @@ namespace CatchButton
             missCount++;   // 놓친 횟수 증가
             if (missCount >= 20)
             {
+                score = 0;  // 게임 오버 시 점수 0점으로 설정
                 GameOver();
                 return;
             }
-
+            score -= 10; // 못 잡을 때마다 10점씩 감소
             this.Text = $"점수 : {score} | 버튼 위치: ({nextX}, {nextY})"; // 폼의 제목에 점수와 버튼의 현재 좌표를 표시
         }
 
@@ -57,7 +58,7 @@ namespace CatchButton
         {
             SystemSounds.Exclamation.Play();   // 잡기 성공 소리
 
-            score += 10;   // 잡기 성공시 점수 10점 추가
+            score += 100;   // 잡기 성공시 점수 100점 추가
 
             button.Width = (int)(button.Width * 0.9);        // 버튼 크기 10% 감소
             button.Height = (int)(button.Height * 0.9);
