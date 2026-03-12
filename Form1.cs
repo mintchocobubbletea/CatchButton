@@ -77,7 +77,7 @@ namespace CatchButton
         }
         private void GameOver()             //게임 오버 함수
         {
-            MessageBox.Show("Game Over"); //게임 오버 알림창
+            MessageBox.Show("다시 시작을 원하시면 다시 시작 버튼을 눌러주세요.", "Game Over"); //게임 오버 알림창
 
             button.Enabled = false;   // 게임 버튼 비활성화
         }
