@@ -49,9 +49,9 @@
             // 
             RestartButton.BackColor = SystemColors.ActiveBorder;
             RestartButton.Font = new Font("맑은 고딕", 15F);
-            RestartButton.Location = new Point(757, 552);
+            RestartButton.Location = new Point(780, 550);
             RestartButton.Name = "RestartButton";
-            RestartButton.Size = new Size(177, 53);
+            RestartButton.Size = new Size(150, 50);
             RestartButton.TabIndex = 1;
             RestartButton.Text = "다시 시작";
             RestartButton.UseVisualStyleBackColor = false;

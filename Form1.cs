@@ -10,6 +10,8 @@ namespace CatchButton
         Random rand = new Random();
         int score = 1000;   // 초기 점수 1000점 설정
         int missCount = 0;   // 버튼 놓친 횟수
+        // 리셋 버튼 위치 x, y: 780 550, 크기 x, y: 150 50
+        // 705 ~ 855, 500~ 550 리셋 버튼 범위
         public Form1()
         {
             InitializeComponent();
@@ -28,15 +30,18 @@ namespace CatchButton
             int nextX = rd.Next(0, maxX);
             int nextY = rd.Next(0, maxY);
             // 4. 위치 할당 (새로운 Point 객체 생성)
+            if (nextX >= 705 && nextX <= 855 && nextY >= 500 && nextY <= 550)
+            {
+                // 리셋 버튼 범위에 들어가는 경우, 다시 랜덤 좌표 생성
+                while (nextX >= 705 && nextX <= 855 && nextY >= 500 && nextY <= 550)
+                {
+                    nextX = rd.Next(0, maxX);
+                    nextY = rd.Next(0, maxY);
+                }
+            }
             button.Location = new Point(nextX, nextY);
             // 5. 시각적 피드백 (폼 제목 표시줄에 좌표 출력)
             this.Text = $"버튼 위치: ({nextX}, {nextY})";
-
-            /*
-            button.Location = new Point(x_position, y_position);  // 버튼을 새로운 위치로 옮김 (새로운 Point 객체 생성)
-
-            int x = rand.Next(0, maxX);    //버튼 위치
-            int y = rand.Next(0, maxY);    //랜덤 위치로 이동*/
 
             SystemSounds.Beep.Play();   // 도망 소리
 
