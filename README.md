@@ -32,3 +32,6 @@
 - '나를 잡아봐' 버튼이 다시 시작 버튼과 겹치지 않게 수정
 - 게임 종료 시 "종료하시겠습니까?" 알림창 추가
 <img width="947" height="645" alt="스크린샷 2026-03-12 123719" src="https://github.com/user-attachments/assets/ed17c0f0-3869-47b2-930d-db763a929e8b" />
+
+-게임 오버 안내 문구 추가
+<img width="997" height="649" alt="스크린샷 2026-03-12 131756" src="https://github.com/user-attachments/assets/e8042e6a-87a5-42da-89f3-a55c446777ba" />
