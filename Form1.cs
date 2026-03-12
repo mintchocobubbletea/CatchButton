@@ -79,7 +79,7 @@ namespace CatchButton
 
         private void RestartButton_MouseClick(object sender, MouseEventArgs e)  //다시 시작 버튼 클릭 시 이벤트 핸들러
         {
-            score = 0;
+            score = 1000;
             missCount = 0;
 
             button.Enabled = true;
